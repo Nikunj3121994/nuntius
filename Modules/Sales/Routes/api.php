@@ -13,20 +13,32 @@
 
 Route::group(['prefix' => '/sales', 'middleware' => ['tenancy.register', 'bindings', 'cors']], function () {
 
-    Route::get('entities/enum', 'EntitiesController@enum');
-    Route::get('entity-addresses/enum/{entity}', 'EntityAddressesController@enum');
-    Route::get('orders/enum', 'OrdersController@enum');
-    Route::get('price-tables/enum', 'PriceTablesController@enum');
-    Route::get('sales-groups/enum', 'SalesGroupsController@enum');
-    Route::get('sales-group-sellers/enum', 'SalesGroupSellersController@enum');
-    Route::get('sales-group-sellers/comission-percent/{salesGroupSeller}', 'SalesGroupSellersController@getComissionPercent');
+    Route::group(['prefix' => '/registers'], function () {
 
-    Route::apiResources([
-        'entities' => 'EntitiesController',
-        'entity-addresses' => 'EntityAddressesController',
-        'orders' => 'OrdersController',
-        'price-tables' => 'PriceTablesController',
-        'sales-groups' => 'SalesGroupsController',
-        'sales-group-sellers' => 'SalesGroupSellersController',
-    ]);
+        Route::get('entities/enum', 'EntitiesController@enum');
+        Route::get('entity-addresses/enum/{entity}', 'EntityAddressesController@enum');
+        Route::get('price-tables/enum', 'PriceTablesController@enum');
+        Route::get('sales-groups/enum', 'SalesGroupsController@enum');
+        Route::get('sales-group-sellers/enum', 'SalesGroupSellersController@enum');
+        Route::get('sales-group-sellers/comission-percent/{salesGroupSeller}', 'SalesGroupSellersController@getComissionPercent');
+
+        Route::apiResources([
+            'entities' => 'EntitiesController',
+            'entity-addresses' => 'EntityAddressesController',
+            'price-tables' => 'PriceTablesController',
+            'sales-groups' => 'SalesGroupsController',
+            'sales-group-sellers' => 'SalesGroupSellersController',
+        ]);
+
+    });
+
+    Route::group(['prefix' => '/movements'], function () {
+
+        Route::get('orders/enum', 'OrdersController@enum');
+        Route::apiResources([
+            'orders' => 'OrdersController',
+        ]);
+        
+    });
+
 });

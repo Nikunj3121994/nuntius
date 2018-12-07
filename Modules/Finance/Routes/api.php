@@ -15,17 +15,21 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'finance', 'middleware' => ['tenancy.register', 'bindings', 'cors']], function () {
 
-    Route::get('business-units/enum', 'BusinessUnitsController@enum');
-    Route::get('finance-natures/enum', 'FinanceNaturesController@enum');
-    Route::get('cost-centers/enum', 'CostCentersController@enum');
-    Route::get('payment-means/enum', 'PaymentMeansController@enum');
-    Route::get('payment-rules/enum', 'PaymentRulesController@enum');
+    Route::group(['prefix' => '/registers'], function () {
 
-    Route::apiResources([
-        'finance-natures' => 'FinanceNaturesController',
-        'business-units' => 'BusinessUnitsController',
-        'cost-centers' => 'CostCentersController',
-        'payment-means' => 'PaymentMeansController',
-        'payment-rules' => 'PaymentRulesController',
-    ]);
+        Route::get('business-units/enum', 'BusinessUnitsController@enum');
+        Route::get('finance-natures/enum', 'FinanceNaturesController@enum');
+        Route::get('cost-centers/enum', 'CostCentersController@enum');
+        Route::get('payment-means/enum', 'PaymentMeansController@enum');
+        Route::get('payment-rules/enum', 'PaymentRulesController@enum');
+
+        Route::apiResources([
+            'finance-natures' => 'FinanceNaturesController',
+            'business-units' => 'BusinessUnitsController',
+            'cost-centers' => 'CostCentersController',
+            'payment-means' => 'PaymentMeansController',
+            'payment-rules' => 'PaymentRulesController',
+        ]);
+    });
+
 });
