@@ -5,8 +5,15 @@
 </template>
 
 <script>
+    import state from '../../../../../store/modules/financial/registers/paymentMeans/index';
+
     export default {
-        name: "PaymentMeans"
+        created() {
+            this.$store.registerModule("financial/registers/paymentMeans", state);
+        },
+        destroyed() {
+            this.$store.unregisterModule("financial/registers/paymentMeans");
+        }
     }
 </script>
 

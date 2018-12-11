@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Cheques a Receber</h1>
+    </div>
 </template>
 
 <script>

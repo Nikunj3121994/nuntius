@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Centros de Custos</h1>
+    </div>
 </template>
 
 <script>

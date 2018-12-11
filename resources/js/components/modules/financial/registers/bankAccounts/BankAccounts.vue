@@ -5,8 +5,15 @@
 </template>
 
 <script>
+    import state from '../../../../../store/modules/financial/registers/bankAccounts/index';
+
     export default {
-        name: "BankAccounts"
+        created() {
+            this.$store.registerModule("financial/registers/bankAccounts", state);
+        },
+        destroyed() {
+            this.$store.unregisterModule("financial/registers/bankAccounts");
+        }
     }
 </script>
 

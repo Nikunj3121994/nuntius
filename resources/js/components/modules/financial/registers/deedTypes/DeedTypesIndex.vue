@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Tipos de Baixas</h1>
+    </div>
 </template>
 
 <script>

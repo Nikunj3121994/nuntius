@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-view></router-view>
+        <h1>Parâmetros por Filial</h1>
     </div>
 </template>
 

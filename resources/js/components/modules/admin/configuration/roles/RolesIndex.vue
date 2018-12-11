@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Regras de Acesso</h1>
+    </div>
 </template>
 
 <script>

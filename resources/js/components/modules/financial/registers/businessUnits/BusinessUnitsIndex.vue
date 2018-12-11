@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Unidades de Negócios</h1>
+    </div>
 </template>
 
 <script>

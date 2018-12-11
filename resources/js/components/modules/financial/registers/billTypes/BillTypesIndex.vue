@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Tipos de Títulos</h1>
+    </div>
 </template>
 
 <script>

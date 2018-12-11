@@ -7,7 +7,7 @@ import NatureOperationTypesForm
     from "../../../../components/modules/admin/registers/natureOperationTypes/NatureOperationTypesForm";
 
 export default {
-    path: 'registes',
+    path: 'registers',
     name: 'adminRegistes',
     component: Registers,
     children: [

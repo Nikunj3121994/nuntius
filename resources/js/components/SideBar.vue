@@ -4,6 +4,7 @@
             v-model="drawer"
             absolute
             temporary
+            :width="400"
     >
         <v-list>
             <v-list-tile

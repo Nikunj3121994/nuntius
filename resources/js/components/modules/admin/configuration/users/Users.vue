@@ -5,8 +5,15 @@
 </template>
 
 <script>
+    import state from '../../../../../store/modules/admin/configuration/users/index';
+
     export default {
-        name: "Users"
+        created() {
+            this.$store.registerModule("admin/configuration/users", state);
+        },
+        destroyed() {
+            this.$store.unregisterModule("admin/configuration/users");
+        }
     }
 </script>
 

@@ -5,7 +5,7 @@ import Movements from "../../../../components/modules/logistics/movements/Moveme
 
 export default {
     path: 'movements',
-    name: 'movements',
+    name: 'logistcsMovements',
     component: Movements,
     children: [
         {

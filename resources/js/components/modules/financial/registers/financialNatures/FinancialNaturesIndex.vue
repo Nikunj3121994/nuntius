@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Naturezas Financeiras</h1>
+    </div>
 </template>
 
 <script>
