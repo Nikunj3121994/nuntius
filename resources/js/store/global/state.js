@@ -8,13 +8,13 @@ const state = {
     subsidiaryName: 'Crescer Alimentos Ltda',
     companyDialogData: {
         companies: [
-            { value: 1, text: 'Crescer'},
-            { value: 3, text: 'Piemonte'}
+            {value: 1, text: 'Crescer'},
+            {value: 3, text: 'Piemonte'}
         ],
         subsidiaries: [
-            { value: 1, text: 'Crescer Alimentos Ltda', companyId: 1},
-            { value: 3, text: 'Piemonte Distribuidora Ltda - SC', companyId: 3},
-            { value: 4, text: 'Piemonte Distribuidora Ltda - SP', companyId: 3}
+            {value: 1, text: 'Crescer Alimentos Ltda', companyId: 1},
+            {value: 3, text: 'Piemonte Distribuidora Ltda - SC', companyId: 3},
+            {value: 4, text: 'Piemonte Distribuidora Ltda - SP', companyId: 3}
         ],
         companyId: null,
         subsidiaryId: null
@@ -27,7 +27,7 @@ const state = {
             nested: false,
         },
         {
-            icon: 'build',
+            icon: 'settings',
             title: 'Configurador',
             nested: true,
             children: [
@@ -135,13 +135,68 @@ const state = {
             nested: true,
             children: [
                 {
-                    icon: 'shopping_cart',
-                    title: 'Movimentos',
+                    title: 'Cadastros',
                     children: [
-                        {title: 'Pedidos', route: 'salesOrders'},
+                        {title: 'Grupos de Vendas', route: 'salesGroups'},
+                        {title: 'Parametrizações Fiscais', route: 'taxParametrizations'},
+                        {title: 'Naturezas da Operação', route: 'natureOperations'},
+                        {title: 'Séries de Nota Fiscal', route: 'invoiceSeries'},
+                        {title: 'Tabelas de Preços', route: 'priceTables'},
+                        {title: 'Variáveis de Markup', route: 'markupVariables'},
+                        {title: 'De/Para CFOP', route: 'fromToCfop'}
                     ]
 
                 },
+                {
+                    title: 'Movimentos',
+                    children: [
+                        {title: 'Pedidos de Venda', route: 'salesOrders'},
+                        {title: 'Ordens de Faturamento', route: 'billingOrders'},
+                        {title: 'Notas de Saída', route: 'outgoingInvoices'}
+                    ]
+
+                },
+                {
+                    title: 'Comissões',
+                    children: [
+                        {title: 'Apuração de Comissões', route: 'comissionsCalculation'}
+                    ]
+
+                },
+                {
+                    title: 'Relatórios',
+                    children: [
+                        {title: 'Consulta de Comissões', route: 'comssionsQueryReport'},
+                        {title: 'Resumo de Vendas', route: 'salesSummaryReport'},
+                        {title: 'Comissões por Vendedor', route: 'sellersComissionsReport'}
+                    ]
+                },
+            ]
+        },
+        {
+            icon: 'store',
+            title: 'Compras',
+            nested: true,
+            children: [
+                {
+                    title: 'Cadastros',
+                    children: [
+                        {title: 'Tipos de Despesas de Importação', route: 'importChargeType'},
+                        {title: 'Produtos X Fornecedores', route: 'productsVendors'},
+                    ]
+                },
+                {
+                    title: 'Movimentos',
+                    children: [
+                        {title: 'Notas de Entrada', route: 'incomingInvoicesType'},
+                    ]
+                },
+                {
+                    title: 'Importação',
+                    children: [
+                        {title: 'Processos de Importação', route: 'importProcess'},
+                    ]
+                }
             ]
         }
     ],

@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Notas Fiscais de Entrada</h1>
+    </div>
 </template>
 
 <script>

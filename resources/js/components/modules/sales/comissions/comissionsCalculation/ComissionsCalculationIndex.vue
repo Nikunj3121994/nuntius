@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        <h1>Apuração de Comissões</h1>
+    </div>
 </template>
 
 <script>

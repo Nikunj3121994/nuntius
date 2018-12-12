@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Processos de Importação</h1>
+        <h1>Séries de Notas Fiscais</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: "ImportProcessIndex"
+        name: "InvoiceSeriesIndex"
     }
 </script>
 

@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Processos de Importação</h1>
+        <h1>Relatório de Comissões por Vendedor</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: "ImportProcessIndex"
+        name: "SellersComissionsIndex"
     }
 </script>
 
