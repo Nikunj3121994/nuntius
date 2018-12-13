@@ -72,6 +72,7 @@ const state = {
                         {title: 'Centros de Custos', route: 'costCenters'},
                         {title: 'Formas de Pagamentos', route: 'paymentMeans'},
                         {title: 'Condições de Pagamentos', route: 'paymentRules'},
+                        {title: 'Bancos', route: 'banks'},
                         {title: 'Contas Bancárias', route: 'bankAccounts'},
                         {title: 'Tipos de Tìtulos', route: 'billTypes'},
                         {title: 'Tipos de Baixas', route: 'deedTypes'},
@@ -137,6 +138,7 @@ const state = {
                 {
                     title: 'Cadastros',
                     children: [
+                        {title: 'Entidades', route: 'entities'},
                         {title: 'Grupos de Vendas', route: 'salesGroups'},
                         {title: 'Parametrizações Fiscais', route: 'taxParametrizations'},
                         {title: 'Naturezas da Operação', route: 'natureOperations'},
@@ -195,6 +197,85 @@ const state = {
                     title: 'Importação',
                     children: [
                         {title: 'Processos de Importação', route: 'importProcess'},
+                    ]
+                }
+            ]
+        },
+        {
+            icon: 'local_shipping',
+            title: 'Logística',
+            nested: true,
+            children: [
+                {
+                    title: 'Movimentos',
+                    children: [
+                        {title: 'Separação de Pedidos', route: 'separation'},
+                    ]
+                }
+            ]
+        },
+        {
+            icon: 'archive',
+            title: 'Estoque',
+            nested: true,
+            children: [
+                {
+                    title: 'Cadastros',
+                    children: [
+                        {title: 'Unidades de Medida', route: 'measurementUnits'},
+                        {title: 'Produtos', route: 'products'},
+                        {title: 'Categorias de Produtos', route: 'productCategories'},
+                        {title: 'Grupos de Produtos', route: 'productGroups'},
+                        {title: 'Lotes de Produtos', route: 'productBatches'},
+                        {title: 'Armazéns', route: 'warehouses'},
+                    ]
+                },
+                {
+                    title: 'Movimentos',
+                    children: [
+                        {title: 'Transferências de Armazém', route: 'stockTransfer'},
+                        {title: 'Transferências de Produtos', route: 'productTransfer'},
+                        {title: 'Saldos Iniciais', route: 'openingBalances'},
+                        {title: 'Reservas de Estoque', route: 'stockReservations'},
+                        {title: 'Baixas Manuais', route: 'manualStockOuts'},
+                    ]
+                },
+                {
+                    title: 'Consultas',
+                    children: [
+                        {title: 'Saldos por Produto', route: 'productBalanceQuery'},
+                        {title: 'Saldos por Armazém', route: 'warehouseBalanceQuery'},
+                        {title: 'Movimento Produto Detalhado', route: 'detailedProductMovementQuery'},
+                    ]
+                },
+                {
+                    title: 'Relatórios',
+                    children: [
+                        {title: 'Saldos por Produto', route: 'productBalanceReport'},
+                        {title: 'Estoque Custo', route: 'stockCostsReport'},
+                        {title: 'Livro - Registro de Inventário', route: 'bookInventoryReport'},
+                    ]
+                }
+            ]
+        },
+        {
+            icon: 'build',
+            title: 'Produção',
+            nested: true,
+            children: [
+                {
+                    title: 'Cadastros',
+                    children: [
+                        {title: 'Estruturas de Produtos', route: 'productStructures'},
+                        {title: 'Tipos de Ordem de Produção', route: 'productionOrderTypes'},
+                        {title: 'Tipos de Incidentes de Produção', route: 'productionIncidentTypes'},
+                        {title: 'Tipos de Finalizações de Produção', route: 'prductionOrderFinalizarionTypes'}
+                    ]
+                },
+                {
+                    title: 'Movimentos',
+                    children: [
+                        {title: 'Ordens de Produção', route: 'productionOrders'}
                     ]
                 }
             ]

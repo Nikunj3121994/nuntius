@@ -24,12 +24,25 @@ import TaxParametrizationsForm
     from "../../../../components/modules/sales/registers/taxParametrizations/TaxParametrizationsForm";
 import NatureOperationsIndex
     from "../../../../components/modules/sales/registers/natureOperations/NatureOperationsIndex";
+import Entities from "../../../../components/modules/sales/registers/entities/Entities";
+import EntitiesIndex from "../../../../components/modules/sales/registers/entities/EntitiesIndex";
+import EntitiesForm from "../../../../components/modules/sales/registers/entities/EntitiesForm";
 
 export default {
     path: 'registers',
     name: 'salesRegisters',
     component: Registers,
     children: [
+        {
+            path: 'entities',
+            component: Entities,
+            children: [
+                {path: '', component: EntitiesIndex, name: 'entities'},
+                {path: 'create', component: EntitiesForm, name: 'entitiesCreate'},
+                {path: 'edit/:id', component: EntitiesForm, name: 'entitiesEdit'},
+                {path: 'view/:id', component: EntitiesForm, name: 'entitiesView'},
+            ]
+        },
         {
             path: 'from-to-cfop',
             component: FromToCfop,

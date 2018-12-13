@@ -34,12 +34,25 @@ import PaymentMeansForm from "../../../../components/modules/financial/registers
 import PaymentRules from "../../../../components/modules/financial/registers/paymentRules/PaymentRules";
 import PaymentRulesIndex from "../../../../components/modules/financial/registers/paymentRules/PaymentRulesIndex";
 import PaymentRulesForm from "../../../../components/modules/financial/registers/paymentRules/PaymentRulesForm";
+import Banks from "../../../../components/modules/financial/registers/banks/Banks";
+import BanksIndex from "../../../../components/modules/financial/registers/banks/BanksIndex";
+import BanksForm from "../../../../components/modules/financial/registers/banks/BanksForm";
 
 export default {
     path: 'registers',
     name: 'financialRegistes',
     component: Registers,
     children: [
+        {
+            path: 'bank',
+            component: Banks,
+            children: [
+                {path: '', component: BanksIndex, name: 'banks'},
+                {path: 'create', component: BanksForm, name: 'banksCreate'},
+                {path: 'edit/:id', component: BanksForm, name: 'banksEdit'},
+                {path: 'view/:id', component: BanksForm, name: 'banksView'},
+            ]
+        },
         {
             path: 'bank-accounts',
             component: BankAccounts,
