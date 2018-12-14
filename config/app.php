@@ -173,6 +173,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * Entrust Service Provider
+         */
+        Zizaco\Entrust\EntrustServiceProvider::class,
+
     ],
 
     /*
@@ -223,7 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Tenant' => App\Support\Tenancy\Facades\GetTenancyFacade::class,
         'Parameter' => App\Support\Tenancy\Facades\GetSubsidiaryParameterFacade::class,
-
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
     ],
 
 ];
